@@ -1,0 +1,62 @@
+@charset "utf-8";
+/*-------------------切换tel-小米手机----*/
+header .nav-tem #xiaomi{height:230px;position: absolute;top:140px;display: none;z-index: 2;}
+header .nav-tem #xiaomi .nav-tel{height:230px;width: 1226px;background: #fff;} 
+header .nav-tem #xiaomi  .nav-tel .nav-tel-one{float:left;height:230px;width: 204px;text-align: center;}
+header .nav-tem #xiaomi  .nav-tel .nav-tel-one .xin{width:64px;height:21px;text-align: center;border: 1px solid #FF6700;color:#FF6700;font:12px/21px "";margin:0 auto;}
+header .nav-tem #xiaomi  .nav-tel .nav-tel-one .xiaomi{width: 203px;height:110px;background: url(../images/bg-tel.jpg) no-repeat right;margin-top:13px;}
+header .nav-tem #xiaomi  .nav-tel .nav-tel-one .mi{font:500 10px/29px "";margin-top:15px;}
+header .nav-tem #xiaomi  .nav-tel .nav-tel-one .money{display:block;height:14px;font-size:14px;color: #FF6700;}
+/*-------------------切换tel ---红米---*/
+#hongmi{height:230px;position: absolute;top:140px;display: none;z-index: 2;}
+#hongmi .nav-tel-tel{height:230px;width: 1226px;background: #fff;} 
+#hongmi .nav-tel-tel .nav-tel-one-nav{float:left;height:230px;width: 204px;text-align: center;}
+#hongmi .nav-tel-tel .nav-tel-one-nav .xin{width:64px;height:21px;text-align: center;border: 1px solid #FF6700;color:#FF6700;font:12px/21px "";margin:0 auto;}
+#hongmi .nav-tel-tel .nav-tel-one-nav .xiaomi{width: 203px;height:110px;background: url(../images/bg-tel.jpg) no-repeat right;margin-top:13px;}
+#hongmi .nav-tel-tel .nav-tel-one-nav .mi{font:500 10px/29px "";margin-top:15px;}
+#hongmi .nav-tel-tel .nav-tel-one-nav .money{display:block;height:14px;font-size:14px;color: #FF6700;}
+/*-------------------切换tel ---平板---*/
+#pinban{height: 230px;position: absolute;top:140px;display: none;z-index: 2;}
+#pinban .pinban-tel{height:230px;width: 1226px;background: #fff;} 
+#pinban .pinban-tel .pinban-one-nav{float:left;height:230px;width: 204px;text-align: center;}
+#pinban .pinban-tel .pinban-one-nav .xin{width:64px;height:21px;text-align: center;border: 1px solid #FF6700;color:#FF6700;font:12px/21px "";margin:0 auto;}
+#pinban .pinban-tel .pinban-one-nav .xiaomi{width: 203px;height:110px;background: url(../images/bg-tel.jpg) no-repeat right;margin-top:13px;}
+#pinban .pinban-tel .pinban-one-nav .xiaomi img{width:145px;height:114px;}
+#pinban .pinban-tel .pinban-one-nav .mi{font:500 10px/29px "";margin-top:15px;}
+#pinban .pinban-tel .pinban-one-nav .nav-money{display:block;height:14px;font-size:14px;color: #FF6700;}
+/*-------------------切换tel ---电视---*/
+#dianshi{height: 230px;position: absolute;top:140px;display: none;z-index: 2;}
+#dianshi .dianshi-tel{height:230px;width: 1226px;background: #fff;} 
+#dianshi .dianshi-tel .dianshi-one-nav{float:left;height:230px;width: 204px;text-align: center;}
+#dianshi .dianshi-tel .dianshi-one-nav .xin{width:64px;height:21px;text-align: center;border: 1px solid #FF6700;color:#FF6700;font:12px/21px "";margin:0 auto;}
+#dianshi .dianshi-tel .dianshi-one-nav .xiaomi{width: 203px;height:110px;background: url(../images/bg-tel.jpg) no-repeat right;margin-top:13px;}
+#dianshi .dianshi-tel .dianshi-one-nav .xiaomi img{width:145px;height:114px;}
+#dianshi .dianshi-tel .dianshi-one-nav .mi{font:500 10px/29px "";margin-top:15px;}
+#dianshi .dianshi-tel .dianshi-one-nav .nav-money{display:block;height:14px;font-size:14px;color: #FF6700;}
+/*-------------------切换tel ---盒子---*/
+#hezi{height: 230px;position: absolute;top:140px;display: none;z-index: 2;}
+#hezi .hezi-tel{height:230px;width: 1226px;background: #fff;} 
+#hezi .hezi-tel .hezi-one-nav{float:left;height:230px;width: 204px;text-align: center;}
+#hezi .hezi-tel .hezi-one-nav .xin{width:64px;height:21px;text-align: center;border: 1px solid #FF6700;color:#FF6700;font:12px/21px "";margin:0 auto;}
+#hezi .hezi-tel .hezi-one-nav .xiaomi{width: 203px;height:110px;background: url(../images/bg-tel.jpg) no-repeat right;margin-top:13px;}
+#hezi .hezi-tel .hezi-one-nav .xiaomi img{width:145px;height:114px;}
+#hezi .hezi-tel .hezi-one-nav .mi{font:500 10px/29px "";margin-top:15px;}
+#hezi .hezi-tel .hezi-one-nav .nav-money{display:block;height:14px;font-size:14px;color: #FF6700;}
+/*-------------------切换tel ---路由器---*/
+#luyou{height: 230px;position: absolute;top:140px;display: none;z-index: 2;}
+#luyou .luyou-tel{height:230px;width: 1226px;background: #fff;} 
+#luyou .luyou-tel .luyou-one-nav{float:left;height:230px;width: 204px;text-align: center;}
+#luyou .luyou-tel .luyou-one-nav .xin{width:64px;height:21px;text-align: center;border: 1px solid #FF6700;color:#FF6700;font:12px/21px "";margin:0 auto;}
+#luyou .luyou-tel .luyou-one-nav .xiaomi{width: 203px;height:110px;background: url(../images/bg-tel.jpg) no-repeat right;margin-top:13px;}
+#luyou .luyou-tel .luyou-one-nav .xiaomi img{width:145px;height:114px;}
+#luyou .luyou-tel .luyou-one-nav .mi{font:500 10px/29px "";margin-top:15px;}
+#luyou .luyou-tel .luyou-one-nav .nav-money{display:block;height:14px;font-size:14px;color: #FF6700;}
+/*-------------------切换tel ---智能硬件---*/
+#zhineng{height: 230px;position: absolute;top:140px;display: none;z-index: 2;}
+#zhineng .zhineng-tel{height:230px;width: 1226px;background: #fff;} 
+#zhineng .zhineng-tel .zhineng-one-nav{float:left;height:230px;width: 204px;text-align: center;}
+#zhineng .zhineng-tel .zhineng-one-nav .xin{width:64px;height:21px;text-align: center;border: 1px solid #FF6700;color:#FF6700;font:12px/21px "";margin:0 auto;}
+#zhineng .zhineng-tel .zhineng-one-nav .xiaomi{width: 203px;height:110px;background: url(../images/bg-tel.jpg) no-repeat right;margin-top:13px;}
+#zhineng .zhineng-tel .zhineng-one-nav .xiaomi img{width:145px;height:114px;}
+#zhineng .zhineng-tel .zhineng-one-nav .mi{font:500 10px/29px "";margin-top:15px;}
+#zhineng .zhineng-tel .zhineng-one-nav .nav-money{display:block;height:14px;font-size:14px;color: #FF6700;}
