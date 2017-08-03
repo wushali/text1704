@@ -1,0 +1,18 @@
+@charset "utf-8";
+.margin{width: 1130px;margin:0 auto;}
+header{height:97px;}
+#main{height:654px;background:#999;position: relative;}
+#main #logon{width:400px;height:524px;background: #fff;position: absolute;top:40px;right: 40px;}
+#main #logon .numb{height:82px;}
+#main #logon .numb .active{float:left;font:24px/82px "";margin-left: 50px;color: #FF6700;}
+#main #logon .numb span{float:left;font:24px/82px "";margin-left: 50px;}
+#main #logon .numb .h4{float:left;font:24px/82px "";margin-left: 50px;}
+#main #logon .numb .h4:hover{color: #FF6700;}
+#main #logon form{width:400px;}
+#main #logon form input{width: 336px;height: 48px;margin-left: 30px;margin-bottom: 20px;padding-left: 10px;}
+#error{width:338px;font-size:10px;color:#FF6700;background: url(../images/error.jpg) no-repeat 1px;padding-left: 20px;margin:10px 0 20px 30px;display: none;}
+#error-num{width:338px;font-size:10px;color:#FF6700;background: url(../images/error.jpg) no-repeat 1px;padding-left: 20px;margin:10px 0 20px 30px;display: none;}
+#main #logon form #btn{background: #FF6700;border: 0;}
+#main #logon .sign{height:38px;width:188px;margin:0 auto;}
+#main #logon .sign .sign-l{float:left;font:14px/38px "";color: #333333;}
+#main #logon .sign span{float:left;font:14px/38px "";margin: 0 10px;}
