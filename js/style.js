@@ -1,5 +1,5 @@
  //window.onload = function (){
-//搜索---------
+  /*搜索*/
 var oInput = document.getElementById("txt");
 		var oList = document.getElementById("list");
 		//var oDis = document.getElementById("dis");
@@ -27,36 +27,115 @@ var oInput = document.getElementById("txt");
 			}
 			oList.innerHTML = html;
 			oList.style.display = "block";
-		}
-	
+		};
+		
+/*logo栏teb切换*/
+$(".nav-tem").hover(
+        function(){
+           $(this).find("div").show();
+        },function(){
+           $(this).find("div").hide();
+        }
+    );
+    
 
-//tab切换----------------------------------
- 	var div1=document.getElementById("box");
- 	var div2=document.getElementById("div2");
- 	var imgs=div1.getElementsByClassName("box-li");
-  //初始化页面图片的位置
- window.onload=function(){
-  for(var i=0; i<imgs.length; i++){
-   imgs[i].style.left = i*1226 +'px'
-  }
- };
- //轮播移动的函数
- function imgMove(){
-  var b1 = false;
-  for(var i = 0; i < imgs.length; i++) {
-   imgs[i].style.left = imgs[i].offsetLeft-1 + 'px';
-   if(imgs[i].offsetLeft==0){
-    b1=true;
-    if(i==0)
-    imgs[imgs.length-1].style='1226px';
-    else
-    imgs[i-1].style.left='1226px'
-   }
-  }
-  if(!b1)
-   setTimeout(imgMove,20);
-  else
-   setTimeout(imgMove,2000);
- }
- setTimeout(imgMove,3000);
-           
+
+
+
+
+
+
+/*无蓬轮播图*/
+
+  
+   $(function(){
+				var i =0;
+				//var _this = this;
+				var $liSit=$(".box-ul");
+				var $liS=$liSit.find(".box-li");
+				$liS.eq(0).clone(true).appendTo($liSit);
+				//$.extend($liS,$liS.eq(0))
+				//$liS.length += $liS.length;
+				//var newlis = $.extend(true, {}, $liS.eq(0));
+				//newlis.clone(true).appendTo($liSit);
+				$liS=$liSit.find(".box-li");
+				console.log($liS)
+				var len=$liS.length;
+				/*console.log(len)*/
+				var perWidth=$liS.eq(0).outerWidth();
+				/*$liSit.css("width",len*perWidth);*/
+				function move(){
+					$liSit.find(".box-li").removeClass('hover')
+					i++;
+					if(i==len){
+						i=1; 
+						$liSit.css("left",0);
+					}
+					if(i==len-1){
+						$("#sliderNav li").eq(0).addClass("hover").siblings().removeClass("hover");
+					}else{
+						$("#sliderNav li").eq(i).addClass("hover").siblings().removeClass("hover");
+					}
+					/*console.log(i)*/
+					$liSit.stop().animate({"left":-i*perWidth},500);
+					
+				}
+				var timer=setInterval(function(){
+					move();
+				},3000)
+				
+				$("#sliderNav li").hover(function(){
+					clearInterval(timer);
+					i=$(this).index()-1;
+					console.log(this)
+					move();
+				},function(){
+					timer = setInterval(move,3000);
+					
+				})
+				
+				$(".btn").last().click(function(){
+					i=i;
+					clearInterval(timer);
+					move();
+					timer=setInterval(move,3000);
+				})
+				$(".btn").first().click(function(){
+					clearInterval(timer);
+					if(i==0){
+						i=len-8;
+						$liSit.stop().css("left",-(len-1)*perWidth);
+					}else{
+						i=i-7;
+					}
+					move();
+					timer=setInterval(move,3000);
+				})
+			});
+
+/*侧边导航*/
+$(function(){
+	$("#partNav ul").on("mouseenter","li",function(){
+		console.log("aa");
+		$(".navCon").show();
+		var index = $(this).index();
+		$.get("nav_data.json",function(data){
+			var html = template("navCon",data[index]);
+			$("#partNav .navCon").html(html);
+		})
+	})
+	$("#partNav").on("mouseleave",function(){
+		$(".navCon").hide();
+	})
+	
+	$.get("nav.json",function(data){
+		var html = template("nav",data);
+		$("#partNav ul").html(html);
+	})
+	
+	
+})
+
+				
+				
+		

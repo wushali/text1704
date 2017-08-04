@@ -1,18 +1,37 @@
 @charset "utf-8";
 .margin{width: 1130px;margin:0 auto;}
 header{height:97px;}
-#main{height:654px;background:#999;position: relative;}
+#main{height:654px;background:#14212a url(../images/login-bg.jpg) no-repeat left;position: relative;}
 #main #logon{width:400px;height:524px;background: #fff;position: absolute;top:40px;right: 40px;}
 #main #logon .numb{height:82px;}
 #main #logon .numb .active{float:left;font:24px/82px "";margin-left: 50px;color: #FF6700;}
 #main #logon .numb span{float:left;font:24px/82px "";margin-left: 50px;}
 #main #logon .numb .h4{float:left;font:24px/82px "";margin-left: 50px;}
 #main #logon .numb .h4:hover{color: #FF6700;}
-#main #logon form{width:400px;}
+/*#main #logon form{width:400px;}*/
+
+#main  #logon .zhili{width:400px;height: 440px;overflow: hidden;}
+#main  #logon .zhili .bor{width: 400px;height: 440px;}
 #main #logon form input{width: 336px;height: 48px;margin-left: 30px;margin-bottom: 20px;padding-left: 10px;}
 #error{width:338px;font-size:10px;color:#FF6700;background: url(../images/error.jpg) no-repeat 1px;padding-left: 20px;margin:10px 0 20px 30px;display: none;}
 #error-num{width:338px;font-size:10px;color:#FF6700;background: url(../images/error.jpg) no-repeat 1px;padding-left: 20px;margin:10px 0 20px 30px;display: none;}
-#main #logon form #btn{background: #FF6700;border: 0;}
-#main #logon .sign{height:38px;width:188px;margin:0 auto;}
-#main #logon .sign .sign-l{float:left;font:14px/38px "";color: #333333;}
-#main #logon .sign span{float:left;font:14px/38px "";margin: 0 10px;}
+#main  #logon .zhili form #btn{background: #FF6700;border: 0;}
+#main  #logon .sign{height:38px;width:188px;margin:0 auto;}
+#main  #logon .sign .sign-l{float:left;font:14px/38px "";color: #333333;}
+#main  #logon .sign span{float:left;font:14px/38px "";margin: 0 10px;}
+#main  #logon .oelse{width:350px;height:28px;padding:100px 25px 10px 25px;}
+#main  #logon .icon{width: 300px;margin:0 auto;}
+#main  #logon .icon .ico{padding-left: 30px;}
+#main  #logon .icon .ico i{font-size: 32px;}
+#main  #logon .icon .ico:hover i{color: #22C30C;}
+/*扫码登录*/
+#main #logon .zhili .saoma{width:400px;background: #fff;height:440px;text-align: center;}
+#main #logon .zhili .saoma .sao-w{width:189px;height:184px;margin:0 auto;padding-top: 70px;padding-bottom: 20px;}
+#main #logon .zhili .saoma .sao-p{font:12px/20px "";color: #B0B0B0;}
+#main #logon .zhili .saoma .sao-p b{color: #FF6700;}
+
+footer{height: 100px;text-align: center;}
+footer .foot{font:14px/19px "";color: #9d9d9d;margin-top: 15px;}
+footer .foot .active{color: #000;}
+footer .foot a:hover{color: #000;}
+footer .foot span{margin:0 5px;}

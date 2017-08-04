@@ -5,6 +5,8 @@
 		<title></title>
 		<link rel="stylesheet" href="css/public.css" type="text/css" />
 		<link rel="stylesheet" href="css/logon.css" type="text/css" />
+		<link rel="stylesheet" href="iconfont/iconfont.css" />
+		<script type="text/javascript" src="js/jquery-1.11.3.js" charset="utf-8"></script>
 	</head>
 	<body>
 	<header>
@@ -14,27 +16,63 @@
 	
 	<div id="main">
 	  <div class="margin">
-	  		<div id=logon>
+	  		<div id="logon">
 			<div class="numb">
-				<a class="h4 active" href="">账号登录</a>
+				<a class="h4 active" href="#">账号登录</a>
 				<span>|</span>
-				<a class="h4" href="">扫码登录</a>
+				<a class="h4" href="#">扫码登录</a>
 			</div>
-			<form action="login.php" method="post">
+			<div class="zhili">
+				<!--账号登录页面-->
+				<div class="bor">
+			<form action="" >
 			  <input type="text" placeholder="邮箱/手机号码/小米账号" name="username" id="username"/>
 			  <input type="password" placeholder="密码" name="password" id="pw" />
-			  <div id="error" >用户名不正确</div>
-			   <div id="error-num" >请输入账号</div>
-			  <input type="submit" value="立即登录" id="btn"/>
+			  <p id="error" >用户名不正确</p>
+			   <p id="error-num" >请输入账号</p>
+			  <input type="button" value="立即登录" id="btn"/>
 			</form>
 			<p class="sign">
 			   <a class="sign-l" href="sign.html">注册小米账号</a>
 			   <span>|</span>
 			   <a class="sign-l" href="">忘记密码</a>
 			  </p>
+			  
+			  <img class="oelse" src="images/else.jpg" alt="" />
+			<p class="icon">
+				<a class="ico" href=""><i class="iconfont icon-qq" ></i></a>
+			 <a class="ico" href=""><i class="iconfont icon-sina" ></i></a>
+			 <a class="ico" href=""><i class="iconfont icon-zhifubao" ></i></a>
+			 <a class="ico" href=""><i class="iconfont icon-weixin" ></i></a>
+			 </p> 
+			</div>
+			<div></div>
+			<!--扫码登录页面-->
+			<div class="saoma">
+				<img class="sao-w" src="images/login-wx.jpg" alt="" />
+				<p class="sao-p">使用 <b>小米商城APP</b> 扫一扫</p>
+				<p class="sao-p">请打开[设置>小米账号>右上角扫一扫]扫码登录</p>
+			</div>
+			</div>
+			
+			
 			</div>
 	</div>
 	</div>
+	
+	<footer>
+		<p class="foot">
+			<a class="active" href="">简体</a>
+			<span>|</span>
+			<a href="">繁体</a>
+			<span>|</span>
+			<a href="">English</a>
+			<span>|</span>
+			<a href="">常见问题</a>
+			
+		</p>
+		<p class="foot">小米公司版权所有-京ICP0023442222<i class="iconfont icon-shopping"></i>米公司版权所有</p>
+		</footer>
 	
 	
 	<script src="js/logon.js" type="text/jscript" charset="utf-8"></script>

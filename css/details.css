@@ -1,0 +1,121 @@
+@charset "utf-8";
+.margin{width:1226px;margin:0 auto;}
+.header-tem{font-size:16px;height:60px;padding-top:40px;}
+.cart{height: 70px;border-top:1px solid #ccc;}
+.cart .top-nav{float:left;width: 400px;height: 70px;font:12px/70px "";}
+.cart .top-nav b{font-size: 18px;}
+.cart .top-nav .jump:hover{color: #FF6700;}
+.cart .cart-max{float:right;width: 500px;height: 70px;font:14px/70px "";}
+.cart .cart-max .cart-r{margin:0 5px;color: #ccc;}
+.cart .cart-max .j-active{color: #FF6700;}
+.cart .cart-max .jum:hover{color: #FF6700;}
+.cart .btn{float:right;display:block;width:100px;height:30px;border: 0;background: #FF6700;color: #fff;margin-top:20px;font:12px/30px "";text-align: center;}
+/*列表切换*/
+#partNav {
+				position:absolute;
+				width: 190px;
+				height: 436px;
+				padding: 12px 0;
+				background:#fff;
+				color: #000;
+				top:140px;
+				left:20px;
+				display: none;
+			}
+			
+			#partNav li {
+				padding-left: 12px;
+				height: 32px;
+				line-height: 32px;
+				font-size: 0;
+			}
+			
+			#partNav li:hover {
+				background: #FF6700;
+			}
+			
+			#partNav span {
+				margin: 0 4px;
+				font-size: 14px;
+			}
+			
+			#partNav li a {
+				color: #000;
+				font-size: 14px;
+			}
+			
+			#partNav li a:hover {
+				color: #C81623;
+			}
+			
+			#partNav .navCon {
+				display: none;
+				position: absolute;
+				left: 190px;
+				top: 0;
+				width: 998px;
+				min-height: 460px;
+				margin-left: -1px;
+				border: 1px solid #f7f7f7;
+				background-color:#fff;
+				box-shadow: 2px 0 5px rgba(0, 0, 0,5);
+			}
+			#partNav .navList{
+				padding: 20px 15px 20px 20px;
+			}
+			#partNav .part1 {
+				float: left;
+				width: 780px;
+			}
+			#partNav .part2 {
+				float: right;
+				width: 170px;
+			}
+			#partNav .channel a{
+				float: left;
+				margin-right: 10px;
+				padding: 2px 8px;
+				background: #6e6568;
+				color: #fff;
+			}
+			#partNav .detail{
+				margin: 20px 0;
+			}
+			#partNav .detail_item{
+				margin-bottom: 15px;
+			}
+			#partNav .detail dt{
+				float: left;
+				width: 70px;
+				text-align: right;
+			}
+			#partNav .detail dt a{
+				display: block;
+				padding: 2px 0;
+				color: #545454;
+				font-weight: bold;
+			}
+			#partNav .detail dt a:hover,#partNav .detail dd a:hover{
+				color:#C81623;
+			}
+			#partNav .detail dd{
+				padding-left: 70px;
+			}
+			#partNav .detail dd a{
+				display: inline-block;
+				padding: 2px 0;
+				margin: 0 5px;
+				color: #787878;
+			}
+			#partNav .detail dd a:before{
+				content: "|";
+				margin-right: 12px;
+				color: #999;
+			}
+			
+			#partNav .part2 a{
+				display: block;
+				float: left;
+				margin: 0 2px 2px 0;
+			}
+.dis-img-1{width:1263px;height:800px ;}			

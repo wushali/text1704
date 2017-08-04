@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+			<link rel="stylesheet" href="css/public.css" type="text/css" />
+		<link rel="stylesheet" href="css/head.css" type="text/css" />
+		<link rel="stylesheet" href="css/switch.css" type="text/css" />
+		<link rel="stylesheet" href="css/details.css" type="text/css" />
+		<script type="text/javascript" src="js/jquery-1.11.3.js" charset="utf-8"></script>
+		<script src="js/template.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		
+		
+		<!--头部菜单栏-->
+		<div id="top">
+			<div class="margin">
+				<div class="top-left">
+					<a href="#">小米商城</a>
+					<span class="sep">|</span>
+					<a href="#">MIUI</a>
+					<span class="sep">|</span>
+					<a href="#">米聊</a>
+					<span class="sep">|</span>
+					<a href="#">游戏</a>
+					<span class="sep">|</span>
+					<a href="#">多看阅读</a>
+					<span class="sep">|</span>
+					<a href="#">云服务</a>
+					<span class="sep">|</span>
+					<a rel="nofollow" href="https://ir.mi.com?from=micom" target="_blank">金融</a>
+					<span class="sep">|</span>
+					<a href="#">小米商城移动版</a>
+					<span class="sep">|</span>
+					<a href="#">问题反馈</a>
+					<span class="sep">|</span>
+					<a href="#">SelectRegion</a>
+				</div>
+				<div class="top-cart">
+					<i class="iconfont icon-shopping"></i>
+					<a href="cart.html">购物车<span id="num">(0)</span></a>
+				</div>
+				<div class="top-in">
+					<a href="logon.html">登录</a>
+					<span class="sep">|</span>
+					<a href="sign.html">注册</a>
+					<span class="sep">|</span>
+					<a href="#">消息通知</a>
+				</div>
+
+			</div>
+		</div>
+
+		<!--logo栏-->
+		<header>
+			<div class="margin">
+				<a class="logo" href="index.html"><img src="images/logo.jpg" alt="" /></a>
+
+				<ul id="header-nav">
+					<li class="header-tem"><a href="#">全部商品分类</a>
+						<!--隐形列表切换-->
+						<div id="partNav">
+			<ul>
+				<script id="nav" type="text/html">
+					{{each navList as value}}
+					<li>
+						{{each value as item i}}
+						<a href="{{item.link}}">{{item.title}}</a>
+						{{if i != value.length-1}}
+						<span class="dl">/</span> {{/if}} {{/each}}
+					</li>
+					{{/each}}
+				</script>
+			</ul>
+			<div class="navCon">
+				<script id="navCon" type="text/html">
+					<div class="navList clearfix">
+						<div class="part1">
+							<div class="channel clearfix">
+								{{each recm as value}}
+								<a href="{{value.link}}" target="_blank">{{value.tit}}<span>&gt;</span></a>
+								{{/each}}
+							</div>
+							<div class="detail">
+								{{each subNavLists as value1}}
+								<dl class="detail_item clearfix">
+									<dt><a href="" target="_blank">{{value1.subNavTit}}<span>&gt;</span></a></dt>
+									<dd>
+										{{each value1.subNavList as value11}}
+										<a href="" target="_blank">{{value11}}</a>
+										{{/each}}
+									</dd>
+								</dl>
+								{{/each}}
+				</script>
+				</div>
+				</div>
+						
+					</li>
+					<li class="nav-tem">
+						<a href="">小米手机</a>
+
+						<!--小米手机滑动效果-->
+						<div id="xiaomi">
+							<ul class="nav-tel clear">
+								<li class="nav-tel-one">
+									<p class="xin">新品</p>
+									<div class="xiaomi">
+										<a href=""><img src="images/nav-tel2.jpg" alt="" /></a>
+									</div>
+									<div class="mi">
+										<a href=""><b>小米5x</b></a>
+									</div>
+									<b class="money">1499元起</b>
+								</li>
+								<li class="nav-tel-one">
+									<p class="xin">新品</p>
+									<div class="xiaomi">
+										<a href=""><img src="images/nav-tel2.jpg" alt="" /></a>
+									</div>
+									<div class="mi">
+										<a href=""><b>小米5x</b></a>
+									</div>
+									<b class="money">1499元起</b>
+								</li>
+								<li class="nav-tel-one">
+									<p class="xin">新品</p>
+									<div class="xiaomi">
+										<a href=""><img src="images/nav-tel2.jpg" alt="" /></a>
+									</div>
+									<div class="mi">
+										<a href=""><b>小米5x</b></a>
+									</div>
+									<b class="money">1499元起</b>
+								</li>
+								<li class="nav-tel-one">
+									<p class="xin">新品</p>
+									<div class="xiaomi">
+										<a href=""><img src="images/nav-tel2.jpg" alt="" /></a>
+									</div>
+									<div class="mi">
+										<a href=""><b>小米5x</b></a>
+									</div>
+									<b class="money">1499元起</b>
+								</li>
+								<li class="nav-tel-one">
+									<p class="xin">新品</p>
+									<div class="xiaomi">
+										<a href=""><img src="images/nav-tel2.jpg" alt="" /></a>
+									</div>
+									<div class="mi">
+										<a href=""><b>小米5x</b></a>
+									</div>
+									<b class="money">1499元起</b>
+								</li>
+								<li class="nav-tel-one">
+									<p class="xin">新品</p>
+									<div class="xiaomi">
+										<a href=""><img src="images/nav-tel2.jpg" alt="" /></a>
+									</div>
+									<div class="mi">
+										<a href=""><b>小米5x</b></a>
+									</div>
+									<b class="money">1499元起</b>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li class="nav-tem">
+						<a href="">红米</a>
+
+						<!--红米手机滑动效果-->
+						<div id="hongmi">
+							<ul class="nav-tel-tel">
+								<li class="nav-tel-one-nav">
+									<p class="xin">新品</p>
+									<div class="xiaomi">
+										<a href=""><img src="images/nav-tel1.jpg" alt="" /></a>
+									</div>
+									<div class="mi">
+										<a href=""><b>小米5x</b></a>
+									</div>
+									<b class="money">1499元起</b>
+								</li>
+								<li class="nav-tel-one-nav">
+									<p class="xin">新品</p>
+									<div class="xiaomi">
+										<a href=""><img src="images/nav-tel1.jpg" alt="" /></a>
+									</div>
+									<div class="mi">
+										<a href=""><b>小米5x</b></a>
+									</div>
+									<b class="money">1499元起</b>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li class="nav-tem">
+						<a href="">平板.笔记本</a>
+						<div id="pinban">
+							<ul class="pinban-tel">
+								<li class="pinban-one-nav">
+									<p class="xin">新品</p>
+									<div class="xiaomi">
+										<a href=""><img src="images/nav-tel3.png" alt="" /></a>
+									</div>
+									<div class="mi">
+										<a href=""><b>小米5x</b></a>
+									</div>
+									<b class="nav-money">1499元起</b>
+								</li>
+								<li class="pinban-one-nav">
+									<p class="xin">新品</p>
+									<div class="xiaomi">
+										<a href=""><img src="images/nav-tel3.png" alt="" /></a>
+									</div>
+									<div class="mi">
+										<a href=""><b>小米5x</b></a>
+									</div>
+									<b class="nav-money">1499元起</b>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li class="nav-tem">
+						<a href="">电视</a>
+
+						<!--电视手机滑动效果-->
+						<div id="dianshi">
+							<ul class="dianshi-tel">
+								<li class="dianshi-one-nav">
+									<p class="xin">新品</p>
+									<div class="xiaomi">
+										<a href=""><img src="images/nav-tel4.png" alt="" /></a>
+									</div>
+									<div class="mi">
+										<a href=""><b>小米5x</b></a>
+									</div>
+									<b class="nav-money">1499元起</b>
+								</li>
+								<li class="dianshi-one-nav">
+									<p class="xin">新品</p>
+									<div class="xiaomi">
+										<a href=""><img src="images/nav-tel4.png" alt="" /></a>
+									</div>
+									<div class="mi">
+										<a href=""><b>小米5x</b></a>
+									</div>
+									<b class="nav-money">1499元起</b>
+								</li>
+								<li class="dianshi-one-nav">
+									<p class="xin">新品</p>
+									<div class="xiaomi">
+										<a href=""><img src="images/nav-tel4.png" alt="" /></a>
+									</div>
+									<div class="mi">
+										<a href=""><b>小米5x</b></a>
+									</div>
+									<b class="nav-money">1499元起</b>
+								</li>
+								<li class="dianshi-one-nav">
+									<p class="xin">新品</p>
+									<div class="xiaomi">
+										<a href=""><img src="images/nav-tel4.png" alt="" /></a>
+									</div>
+									<div class="mi">
+										<a href=""><b>小米5x</b></a>
+									</div>
+									<b class="nav-money">1499元起</b>
+								</li>
+								<li class="dianshi-one-nav">
+									<p class="xin">新品</p>
+									<div class="xiaomi">
+										<a href=""><img src="images/nav-tel4.png" alt="" /></a>
+									</div>
+									<div class="mi">
+										<a href=""><b>小米5x</b></a>
+									</div>
+									<b class="nav-money">1499元起</b>
+								</li>
+								<li class="dianshi-one-nav">
+									<p class="xin">新品</p>
+									<div class="xiaomi">
+										<a href=""><img src="images/nav-tel4.png" alt="" /></a>
+									</div>
+									<div class="mi">
+										<a href=""><b>小米5x</b></a>
+									</div>
+									<b class="nav-money">1499元起</b>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li class="nav-tem">
+						<a href="">盒子.影音</a>
+
+						<!--盒子.影音滑动效果-->
+						<div id="hezi">
+							<ul class="hezi-tel">
+								<li class="hezi-one-nav">
+									<p class="xin">新品</p>
+									<div class="xiaomi">
+										<a href=""><img src="images/nav-tel5.png" alt="" /></a>
+									</div>
+									<div class="mi">
+										<a href=""><b>小米5x</b></a>
+									</div>
+									<b class="nav-money">1499元起</b>
+								</li>
+
+							</ul>
+						</div>
+					</li>
+					<li class="nav-tem">
+						<a href="">路由器</a>
+						<div id="luyou">
+							<ul class="luyou-tel">
+								<li class="luyou-one-nav">
+									<p class="xin">新品</p>
+									<div class="xiaomi">
+										<a href=""><img src="images/nav-tel6.png" alt="" /></a>
+									</div>
+									<div class="mi">
+										<a href=""><b>小米5x</b></a>
+									</div>
+									<b class="nav-money">1499元起</b>
+								</li>
+
+							</ul>
+						</div>
+					</li>
+					<li class="nav-tem">
+						<a href="">智能硬件</a>
+
+						<!--智能硬件滑动效果-->
+						<div id="zhineng">
+							<ul class="zhineng-tel">
+								<li class="zhineng-one-nav">
+									<p class="xin">新品</p>
+									<div class="xiaomi">
+										<a href=""><img src="images/nav-tel7.png" alt="" /></a>
+									</div>
+									<div class="mi">
+										<a href=""><b>小米5x</b></a>
+									</div>
+									<b class="nav-money">1499元起</b>
+								</li>
+
+							</ul>
+						</div>
+					</li>
+					<li class="nav-tem">
+						<a href="">服务</a>
+					</li>
+					<li class="nav-tem">
+						<a href="">社区</a>
+					</li>
+				</ul>
+				<form action="">
+					<input type="text" id="txt" />
+					<a href="" id="btn" class="iconfont icon-sousuo"></a>
+					<a href="" class="dis">电视4A 65</a>
+					<a href="" class="die">小米</a>
+					<ul id="list">
+						<li>
+							<a href=""></a>
+						</li>
+					</ul>
+				</form>
+			</div>
+
+		</header>
+		
+		
+		
+		
+		
+		
+		<div class="cart">
+			<div class="margin">
+			<p class="top-nav"><b>小米净水器（厨下式）</b><span class="cart-top-nav">|</span><a class="jump" href="">小米净水器厨上式（增强版）</a></p>
+			<!--<input type="button" value="加入购物车" class="btn" data-id="1001"/>-->
+			<a href=""  class="btn" data-id="1001" >立即购买</a>
+			<p class="cart-max">
+			<a href="" class="jum j-active">概述</a>	
+			<span class="cart-r">|</span>
+			<a href="" class="jum">净化原理</a>	
+			<span class="cart-r">|</span>
+			<a href="" class="jum">净化效果</a>	
+			<span class="cart-r">|</span>
+			<a href="" class="jum">智能控制</a>	
+			<span class="cart-r">|</span>
+			<a href="" class="jum">规格</a>	
+			<span class="cart-r">|</span>
+			<a href="" class="jum">安装服务</a>	
+			<span class="cart-r">|</span>
+			<a href="" class="jum">用户评价</a>	
+			
+			</p>
+			
+			</div>
+		</div>
+		<div class="dis-img">
+			<img class="dis-img-1" src="images/detail-bg.jpg" alt="" />
+		</div>
+		<div class="dis-img1">
+			<img class="dis-img-1" src="images/details-bg2.jpg" alt="" />
+		</div>
+		
+		<script type="text/javascript">
+			$(".nav-tem").hover(
+        function(){
+           $(this).find("div").show();
+        },function(){
+           $(this).find("div").hide();
+        }
+    );
+    
+		</script>
+		<script src="js/common.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/details.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>
