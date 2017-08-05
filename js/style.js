@@ -37,14 +37,8 @@ $(".nav-tem").hover(
            $(this).find("div").hide();
         }
     );
-    
-
-
-
-
-
-
-
+   
+ 
 /*无蓬轮播图*/
 
   
@@ -59,7 +53,7 @@ $(".nav-tem").hover(
 				//var newlis = $.extend(true, {}, $liS.eq(0));
 				//newlis.clone(true).appendTo($liSit);
 				$liS=$liSit.find(".box-li");
-				console.log($liS)
+				//console.log($liS)
 				var len=$liS.length;
 				/*console.log(len)*/
 				var perWidth=$liS.eq(0).outerWidth();
@@ -136,6 +130,63 @@ $(function(){
 	
 })
 
-				
-				
+
+	/*内容区图片翻页区*/
+	
+   window.onload = function() {
+
+function animate(offset) {
+	
+	var list = document.getElementsByClassName('tushu')[0];
+console.log(list);
+var prev = document.getElementsByClassName('prev')[0];
+
+var next = document.getElementsByClassName('next')[0];
+  console.log(next);
+
+//获取的是style.left，是相对左边获取距离，所以第一张图后style.left都为负值，
+//且style.left获取的是字符串，需要用parseInt()取整转化为数字。
+var newLeft = parseInt(list.style.left) + offset;
+
+
+   console.log(newLeft);
+list.style.left = newLeft + 'px';
+}
+prev.onclick = function() { 
+	
+animate(296);
+}
+next.onclick = function() { 
+	console.log("--------------------");
+animate(-296);
+}
+
+//if(newLeft<-888){	
+//list.style.left = -296 + 'px';
+//}else if(newLeft>-296){
+//list.style.left = -888 + 'px';
+//}
+
+};
+
+ $(function(){
+	   	        $(".yuan .tab").click(function(){
+	   	           
+	   	           $(".yuan .tab").removeClass("u-active");
+	   	           $(this).addClass("u-active");
+	   	           
+	   	            var index = $(this).index();
+	   	            console.log(index);
+	   	             $(".tushu li").hide();
+	   	            $(".tushu .hali").eq(index).show();
+	   	          // $(".tushu .hali").eq(index).css("left","-296");
+	   	          
+	   	           console.log("tushu li")
+	   	           
+	   	          
+	   	          
+	   	           
+	   	       })
+	   	       
+	   	   });
 		
