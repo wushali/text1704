@@ -114,10 +114,11 @@
 		}
 		/*哈利轮播*/
 #content .tushu-w{
+	float:left;
 	height: 420px;
 			width: 296px;
 			position: relative;
-			overflow: hidden;
+			overflow:hidden;
 			background: #fff;
 			border-top: 1px solid #22C30C;
 }		
@@ -214,21 +215,135 @@
 				bottom:150px;
 				transition:1s
 			}
-#content .tushu-w .dj .btn{
+#content .tushu-w .dj .prev{
 				left: 0px;
 			}
-#content .tushu-w .dj .bto{
+#content .tushu-w .dj .next{
 				
 				right: 0px;
 			}
-#content .tushu-w .dj .btn:hover{background:#333;}
-#content .tushu-w .dj .bto:hover{background: #333;}
+#content .tushu-w .dj .prev:hover{background:#333;}
+#content .tushu-w .dj .next:hover{background: #333;}
+
+/*内容区二列*/
+#content .tushu-c{
+	float:left;
+	height: 420px;
+			width: 296px;
+			position: relative;
+			
+			background: #fff;
+			border-top: 1px solid #22C30C;
+}		
+#content .tushu-c .tushu1 {
+			height: 400px;
+			width: 889px;
+			
+			position: absolute;
+			
+
+		}
+/*#content  h3 {
+			width: 100px;
+			font: 14px/24px "";
+			padding:40px 0 10px 0;
+			color: #FF6700;
+			margin:0 auto;
+			text-align: center;
+		}*/
+#content .tushu-c .tushu1 .hali1 {
+			width: 296px;
+			height: 340px;
+			background: #fff;
+			float:left
+		}
+#content .tushu-c .tushu1 .hali1 .p-s{
+	display: block;
+	text-align: center;
+}
+#content .tushu-c .tushu1 .hali1 .p-s p{
+	font:24px/36px "";
+	
+}
+#content .tushu-c .tushu1 .hali1 .p-s span{
+	display: block;
+	font:10px/20px "";
+	color: #ccc;
+	width: 183px;
+	margin: 0 auto;
+	
+}
+#content .tushu-c .tushu1 .hali1 .p-s b{
+	font:12px/60px "";
+	color: #000000;
+	display: block;
+	width: 183px;
+	text-align: center;
+	margin:0 auto;
+}	
+#content .tushu-c .tushu1 .hali1 .p-s img{
+	width:200px;
+	height: 142px;
+	padding: 0 40px;
+}	
+#content .tushu-c .yuan1{
+	width: 296px;
+	height: 30px;
+	position: absolute;
+	bottom: 20px;
+	left:90px
+}
+#content .tushu-c .yuan1 u{
+	display: block;
+	float:left;
+	width:7px;
+	height:7px;
+	border: 1px solid #999;
+	border-radius:100%;
+	background:#999999 ;
+	
+	margin: 15px;
+}
+#content .tushu-c .yuan1 u.u-active{
+	background: #F7F7F7;
+	border: 2px solid #FF6700;
+}
+#content .tushu-c .yuan1 u:hover{
+	background:#FF6700 ;
+	}
+
+
+
+#content .tushu-c .dj a{
+				display: block;
+				position: absolute;
+				width: 20px;
+				height: 40px;
+				background: rgba(51,51,51,.4);
+				text-align: center;
+				line-height: 40px;
+				font-size: 40px;
+				color: white;
+				cursor: pointer;
+				bottom:150px;
+				transition:1s
+			}
+#content .tushu-c .dj .prev{
+				left: 0px;
+			}
+#content .tushu-c .dj .next{
+				
+				right: 0px;
+			}
+#content .tushu-c .dj .prev:hover{background:#333;}
+#content .tushu-c .dj .next:hover{background: #333;}
 
 
 	/*视频区，静态*/
 #sp {
 		height: 285px;
 		background: #f5f5f5;
+		padding-bottom: 60px;
 	}
 #sp .sp-ul .sp-li {
 		width: 296px;

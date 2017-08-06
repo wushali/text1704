@@ -1,0 +1,57 @@
+@charset "utf-8";
+.login{
+	height: 50px;
+	background: #ccc;
+	text-align: center;
+	font:14px/50px "";
+}
+.login p a{
+	color: #FF6700;
+	margin:0 10px;
+}
+.login p span{
+	color: #666;
+}
+#show{
+	height:1182px;
+}
+#show .show-img{
+	width: 560px;
+	height: 560px;
+	float:left;
+	position: relative;
+	overflow: hidden;
+}
+#show .show-img .show-p{
+	width:1126px;
+	height: 560px;
+	background: #ff0;
+}
+#show .show-img img{
+	width: 560px;
+	height: 560px;
+	
+}
+#show .dj a{
+				display: block;
+				position: absolute;
+				width: 20px;
+				height: 40px;
+				background: rgba(51,51,51,.4);
+				text-align: center;
+				line-height: 40px;
+				font-size: 40px;
+				color: white;
+				cursor: pointer;
+				bottom:150px;
+				transition:1s
+			}
+#show .dj .prev{
+				left: 0px;
+			}
+#show .dj .next{
+				
+				right: 0px;
+			}
+#show .dj .prev:hover{background:#333;}
+#show .dj .next:hover{background: #333;}

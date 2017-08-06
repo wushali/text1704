@@ -1,4 +1,4 @@
-
+   /*热门、电视影音、电脑。家居切换*/
 	   	   $(function(){
 	   	        $(".more_Nav .tab-li").mouseover(function(){
 	   	           
