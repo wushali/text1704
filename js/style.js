@@ -41,75 +41,75 @@ $(".nav-tem").hover(
 
 /*无縫轮播图*/
 
-$(function() {
-	var i = 0;
-	//var _this = this;
-	var $liSit = $(".box-xd");
-	var $liS = $liSit.find(".box-ul");
-	//$liS.eq(0).clone(true).appendTo($liSit);
-	//$.extend($liS,$liS.eq(0))
-	//$liS.length += $liS.length;
-	//var newlis = $.extend(true, {}, $liS.eq(0));
-	//newlis.clone(true).appendTo($liSit);
-	//$liS = $liSit.find(".box-ul");
-	//console.log($liS)
-	var len = $liS.length;
-	
-	console.log("img----------"+len);
-	var perWidth = $liS.eq(0).outerWidth();
-	/*$liSit.css("width",len*perWidth);*/
-	function move() {
-		$liSit.find(".box-ul").removeClass('box-active')
-		i++;
-		if(i == len) {
-			i = 1;
-			$liSit.css("left", 0);
-		}
-		//if(i == len - 1) {
-//			$("#sliderNav li").eq(0).addClass("hover").siblings().removeClass("hover");
-//		} else {
-//			$("#sliderNav li").eq(i).addClass("hover").siblings().removeClass("hover");
+//$(function() {
+//	var i = 0;
+//	//var _this = this;
+//	var $liSit = $(".box-xd");
+//	var $liS = $liSit.find(".box-ul");
+//	//$liS.eq(0).clone(true).appendTo($liSit);
+//	//$.extend($liS,$liS.eq(0))
+//	//$liS.length += $liS.length;
+//	//var newlis = $.extend(true, {}, $liS.eq(0));
+//	//newlis.clone(true).appendTo($liSit);
+//	//$liS = $liSit.find(".box-ul");
+//	//console.log($liS)
+//	var len = $liS.length;
+//	
+//	console.log("img----------"+len);
+//	var perWidth = $liS.eq(0).outerWidth();
+//	/*$liSit.css("width",len*perWidth);*/
+//	function move() {
+//		$liSit.find(".box-ul").removeClass('box-active')
+//		i++;
+//		if(i == len) {
+//			i = 1;
+//			$liSit.css("left", 0);
 //		}
-		/*console.log(i)*/
-		$liSit.stop().animate({ "left": -1 * perWidth }, 500);
-
-	}
-	var timer = setInterval(function() {
-		move();
-	}, 500)
-
-//	$("#sliderNav li").hover(function() {
-//		clearInterval(timer);
-//		i = $(this).index() - 1;
-//		console.log(this)
-//		move();
-//	}, function() {
-//		timer = setInterval(move, 3000);
+//		//if(i == len - 1) {
+////			$("#sliderNav li").eq(0).addClass("hover").siblings().removeClass("hover");
+////		} else {
+////			$("#sliderNav li").eq(i).addClass("hover").siblings().removeClass("hover");
+////		}
+//		/*console.log(i)*/
+//		$liSit.stop().animate({ "left": -1 * perWidth }, 500);
 //
+//	}
+//	var timer = setInterval(function() {
+//		move();
+//	}, 500)
+//
+////	$("#sliderNav li").hover(function() {
+////		clearInterval(timer);
+////		i = $(this).index() - 1;
+////		console.log(this)
+////		move();
+////	}, function() {
+////		timer = setInterval(move, 3000);
+////
+////	})
+//
+//	$(".bto").click(function() {
+//		i = i;
+//		clearInterval(timer);
+//		move();
+//		timer = setInterval(move, 3000);
 //	})
-
-	$(".bto").click(function() {
-		i = i;
-		clearInterval(timer);
-		move();
-		timer = setInterval(move, 3000);
-	})
-	$(".btn").click(function() {
-		clearInterval(timer);
-		if(i == 0) {
-			i = len - 2;
-			$liSit.stop().css("left", -(len - 1) * perWidth);
-		} else {
-			i = i - 1;
-		}
-		move();
-		timer = setInterval(move, 3000);
-	})
-});
+//	$(".btn").click(function() {
+//		clearInterval(timer);
+//		if(i == 0) {
+//			i = len - 2;
+//			$liSit.stop().css("left", -(len - 1) * perWidth);
+//		} else {
+//			i = i - 1;
+//		}
+//		move();
+//		timer = setInterval(move, 3000);
+//	})
+//});
 
 
 
-
+/*无縫轮播图*/
 //$(function() {
 //
 //	$(".box-xd .box-ul .box-li").mouseover(function() {
@@ -218,6 +218,18 @@ window.onload = function() {
 	var prev2 = document.getElementById('prev2');
 	var next2 = document.getElementById('next2');
 	var list2 = document.getElementById('tushu2');
+	
+	var index3 = 0;
+	var prev3 = document.getElementById('prev3');
+	var next3 = document.getElementById('next3');
+	var list3 = document.getElementById('tushu3');
+	
+	var index4 = 0;
+	var prev4 = document.getElementById('prev4');
+	var next4 = document.getElementById('next4');
+	var list4 = document.getElementById('tushu4');
+	
+	
 	console.log(prev2);
 	prev1.onclick = function() {
 		index1 = index1 - 1;
@@ -227,6 +239,7 @@ window.onload = function() {
 		index1 = index1 + 1;
 		clickNext1(index1);
 	}
+	
 
 	prev2.onclick = function() {
 		
@@ -238,6 +251,26 @@ window.onload = function() {
 		index2 = index2 + 1;
 		clickNext2(index2);
 
+	}
+	prev3.onclick = function() {
+		
+		index3 = index3 - 1;
+		clickPrev3(index3);
+
+	}
+	next3.onclick = function() {
+		index3 = index3 + 1;
+		clickNext3(index3);
+	}
+	prev4.onclick = function() {
+		
+		index4 = index4 - 1;
+		clickPrev4(index4);
+
+	}
+	next4.onclick = function() {
+		index4 = index4 + 1;
+		clickNext4(index4);
 	}
 };
 
@@ -273,6 +306,38 @@ function changeDian2() {
 
 	})
 }
+$(function() {
+	changeDian3();
+});
+
+function changeDian3() {
+	$(".yuan3 .tab").click(function() {
+		$(".yuan3 .tab").removeClass("u-active");
+		$(this).addClass("u-active");
+		var index = $(this).index();
+        
+		$(".tushu2 li").hide();
+		$(".tushu2 .hali2").eq(index).show();
+
+	})
+}
+$(function() {
+	changeDian4();
+});
+
+function changeDian4() {
+	$(".yuan4 .tab").click(function() {
+		$(".yuan4 .tab").removeClass("u-active");
+		$(this).addClass("u-active");
+		var index = $(this).index();
+        
+		$(".tushu3 li").hide();
+		$(".tushu3 .hali3").eq(index).show();
+
+	})
+}
+
+
 
 function clickPrev1(index) {
 	console.log("left-----" + index);
@@ -293,6 +358,26 @@ function clickPrev2(index) {
 	}
 	if(index <= 3 && index >= 0) {
 		animate2(index);
+	}
+}
+function clickPrev3(index) {
+	console.log("left-----" + index);
+	if(index < 0) {
+		index = 0;
+		return;
+	}
+	if(index <= 3 && index >= 0) {
+		animate3(index);
+	}
+}
+function clickPrev4(index) {
+	console.log("left-----" + index);
+	if(index < 0) {
+		index = 0;
+		return;
+	}
+	if(index <= 3 && index >= 0) {
+		animate4(index);
 	}
 }
 
@@ -316,6 +401,28 @@ function clickNext2(index) {
 	console.log("right-----" + index);
 	if(index < 3 && index >= 0) {
 		animate2(index);
+	}
+
+}
+function clickNext3(index) {
+	if(index >= 3) {
+		index = 2;
+		return;
+	}
+	console.log("right-----" + index);
+	if(index < 3 && index >= 0) {
+		animate3(index);
+	}
+
+}
+function clickNext4(index) {
+	if(index >= 3) {
+		index = 2;
+		return;
+	}
+	console.log("right-----" + index);
+	if(index < 3 && index >= 0) {
+		animate4(index);
 	}
 
 }
@@ -364,3 +471,92 @@ function animate2(index) {
 	}
 
 }
+
+/*三列*/
+
+function animate3(index) {
+	$(".yuan3 .tab").removeClass("u-active");
+	switch(index) {
+		case 0:
+			//alert("index="+index);
+			$(".tushu2 li").hide();
+			$(".yuan3 .d1").addClass("u-active");
+			$(".tushu2 .hali2").eq(0).show();
+			break;
+		case 1:
+			$(".tushu2 li").hide();
+			$(".yuan3 .d2").addClass("u-active");
+			$(".tushu2 .hali2").eq(1).show();
+			break;
+		case 2:
+			$(".tushu2 li").hide();
+			$(".yuan3 .d3").addClass("u-active");
+			$(".tushu2 .hali2").eq(2).show();
+			break;
+	}
+
+}
+/*四列*/
+
+
+function animate4(index) {
+	$(".yuan4 .tab").removeClass("u-active");
+	switch(index) {
+		case 0:
+			//alert("index="+index);
+			$(".tushu3 li").hide();
+			$(".yuan4 .t1").addClass("u-active");
+			$(".tushu3 .hali3").eq(0).show();
+			break;
+		case 1:
+			$(".tushu3 li").hide();
+			$(".yuan4 .t2").addClass("u-active");
+			$(".tushu3 .hali3").eq(1).show();
+			break;
+		case 2:
+			$(".tushu3 li").hide();
+			$(".yuan4 .t3").addClass("u-active");
+			$(".tushu3 .hali3").eq(2).show();
+			break;
+	}
+
+}
+
+
+
+
+
+/*电视影音引用json区域  bug*/
+$(window).load(function(){
+	$.ajax({
+		type:"GET",
+		url:"index.json",
+		async:true,
+		success:function(data){
+			
+			var html="";
+			for(var i in data){
+				
+			
+			html += "<li class='brick-item'><a href='detail.html?id='"+data[i].id+"'><img src=' "+data[i].src +" '><b class='box-i'>"+date[i].title+"</b></a><b class='box-span'>"+date[i].details+"</b><p class='box-p'>"+data[i].price+"</p><p class='pos'>"+data[i].name +"</p></li>"
+		}
+			$(" .tab-content2  ").html(html);
+			}
+	})
+	})
+	
+
+/*var oNewsList = document.getElementById("news");
+				var oUl = oNewsList.getElementsByTagName("ul")[0];
+				var oBtn = document.getElementById("btn");
+				Ajax("news.json",foo);
+				function foo(data){
+					data = JSON.parse(data);
+					var html = "";
+					for(var i in data){
+						html += "<li class='brick-item'><a href='#'><img src=' "+data[i].src +" '><b class='box-i'>"+date[i].title+"</b></a><b class='box-span'>"+date[i].details+"</b><p class='box-p'>"+data[i].price+"</p><p class='pos'>"+data[i].name +"</p></li>"
+					}
+					oUl.innerHTML = html;*/
+
+
+

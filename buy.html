@@ -1,19 +1,22 @@
 <!DOCTYPE html>
 <html>
+
 	<head>
 		<meta charset="UTF-8">
 		<title></title>
-			<link rel="stylesheet" href="css/public.css" type="text/css" />
+		<link rel="stylesheet" href="css/public.css" type="text/css" />
 		<link rel="stylesheet" href="css/head.css" type="text/css" />
 		<link rel="stylesheet" href="css/switch.css" type="text/css" />
 		<link rel="stylesheet" href="css/details.css" type="text/css" />
 		<link rel="stylesheet" href="css/buy.css" type="text/css" />
+		<link rel="stylesheet" href="iconfont/iconfont.css" />
 		<script type="text/javascript" src="js/jquery-1.11.3.js" charset="utf-8"></script>
 		<script src="js/template.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/common.js" type="text/javascript" charset="utf-8"></script>
 	</head>
+
 	<body>
-		
-		
+
 		<!--头部菜单栏-->
 		<div id="top">
 			<div class="margin">
@@ -59,45 +62,46 @@
 				<a class="logo" href="index.html"><img src="images/logo.jpg" alt="" /></a>
 
 				<ul id="header-nav">
-					<li class="header-tem"><a href="#">全部商品分类</a>
+					<li class="header-tem">
+						<a href="#">全部商品分类</a>
 						<!--隐形列表切换-->
 						<div id="partNav">
-			<ul>
-				<script id="nav" type="text/html">
-					{{each navList as value}}
-					<li>
-						{{each value as item i}}
-						<a href="{{item.link}}">{{item.title}}</a>
-						{{if i != value.length-1}}
-						<span class="dl">/</span> {{/if}} {{/each}}
-					</li>
-					{{/each}}
-				</script>
-			</ul>
-			<div class="navCon">
-				<script id="navCon" type="text/html">
-					<div class="navList clearfix">
-						<div class="part1">
-							<div class="channel clearfix">
-								{{each recm as value}}
-								<a href="{{value.link}}" target="_blank">{{value.tit}}<span>&gt;</span></a>
-								{{/each}}
-							</div>
-							<div class="detail">
-								{{each subNavLists as value1}}
-								<dl class="detail_item clearfix">
-									<dt><a href="" target="_blank">{{value1.subNavTit}}<span>&gt;</span></a></dt>
-									<dd>
-										{{each value1.subNavList as value11}}
-										<a href="" target="_blank">{{value11}}</a>
-										{{/each}}
-									</dd>
-								</dl>
-								{{/each}}
-				</script>
-				</div>
-				</div>
-						
+							<ul>
+								<script id="nav" type="text/html">
+									{{each navList as value}}
+									<li>
+										{{each value as item i}}
+										<a href="{{item.link}}">{{item.title}}</a>
+										{{if i != value.length-1}}
+										<span class="dl">/</span> {{/if}} {{/each}}
+									</li>
+									{{/each}}
+								</script>
+							</ul>
+							<div class="navCon">
+								<script id="navCon" type="text/html">
+									<div class="navList clearfix">
+										<div class="part1">
+											<div class="channel clearfix">
+												{{each recm as value}}
+												<a href="{{value.link}}" target="_blank">{{value.tit}}<span>&gt;</span></a>
+												{{/each}}
+											</div>
+											<div class="detail">
+												{{each subNavLists as value1}}
+												<dl class="detail_item clearfix">
+													<dt><a href="" target="_blank">{{value1.subNavTit}}<span>&gt;</span></a></dt>
+													<dd>
+														{{each value1.subNavList as value11}}
+														<a href="" target="_blank">{{value11}}</a>
+														{{/each}}
+													</dd>
+												</dl>
+												{{/each}}
+								</script>
+								</div>
+								</div>
+
 					</li>
 					<li class="nav-tem">
 						<a href="">小米手机</a>
@@ -369,37 +373,34 @@
 						</li>
 					</ul>
 				</form>
-			</div>
+				</div>
 
 		</header>
-		
-		
-		
-		
-		
-		
+
 		<div class="cart">
 			<div class="margin">
-			<p class="top-nav"><b>小米净水器（厨下式）</b><span class="cart-top-nav">|</span><a class="jump" href="">小米净水器厨上式（增强版）</a></p>
-			<!--<input type="button" value="加入购物车" class="btn" data-id="1001"/>-->
-			<a href=""  class="btn" data-id="1001" >立即购买</a>
-			<p class="cart-max">
-			<a href="" class="jum j-active">概述</a>	
-			<span class="cart-r">|</span>
-			<a href="" class="jum">净化原理</a>	
-			<span class="cart-r">|</span>
-			<a href="" class="jum">净化效果</a>	
-			<span class="cart-r">|</span>
-			<a href="" class="jum">智能控制</a>	
-			<span class="cart-r">|</span>
-			<a href="" class="jum">规格</a>	
-			<span class="cart-r">|</span>
-			<a href="" class="jum">安装服务</a>	
-			<span class="cart-r">|</span>
-			<a href="" class="jum">用户评价</a>	
-			
-			</p>
-			
+				<p class="top-nav"><b>小米净水器（厨下式）</b><span class="cart-top-nav">|</span>
+					<a class="jump" href="">小米净水器厨上式（增强版）</a>
+				</p>
+				<!--<input type="button" value="加入购物车" class="btn" data-id="1001"/>-->
+				<!--<a href="" class="btn" data-id="1001">立即购买</a>-->
+				<p class="cart-max">
+					<a href="" class="jum j-active">概述</a>
+					<span class="cart-r">|</span>
+					<a href="" class="jum">净化原理</a>
+					<span class="cart-r">|</span>
+					<a href="" class="jum">净化效果</a>
+					<span class="cart-r">|</span>
+					<a href="" class="jum">智能控制</a>
+					<span class="cart-r">|</span>
+					<a href="" class="jum">规格</a>
+					<span class="cart-r">|</span>
+					<a href="" class="jum">安装服务</a>
+					<span class="cart-r">|</span>
+					<a href="" class="jum">用户评价</a>
+
+				</p>
+
 			</div>
 		</div>
 		<!--<div class="dis-img">
@@ -408,268 +409,352 @@
 		<div class="dis-img1">
 			<img class="dis-img-1" src="images/details-bg2.jpg" alt="" />
 		</div>-->
-		
+
 		<!--为方便购买登录区-->
-		<div class="login">
-			<p>为方便您购买，请提前便登录<a href="">立即登录 <span>×</span></a></p>
-			
+		<div id="login">
+			<p>为方便您购买，请提前便登录
+				<a href="logon.html">立即登录 </a>
+				<span class="del">×</span>
+			</p>
+
 		</div>
-		
+
 		<!--展示区-->
 		<div id="show">
 			<div class="margin">
-				<div class="show-img">
+		<!--js制作数据区-->
+				<div id="show-img">
 					<p class="show-p" style="left:-560px">
-					<img src="images/show-1.jpg" alt="" />
-					<img src="images/show-2.jpg" alt="" />
+						<!--<img src="images/show-1.jpg" alt="" />
+						<img src="images/show-2.jpg" alt="" />-->
 					</p>
 					<div class="dj">
-								<a href="javacript:;" class="prev" id="prev1">&lt;</a>
-								<a href="javacript:;" class="next" id="next1">&gt;</a>
+						<a href="javacript:;" class="prev" id="prev1">&lt;</a>
+						<a href="javacript:;" class="next" id="next1">&gt;</a>
+					</div>
 				</div>
-				</div>
-				
+
 			</div>
-			<!--左边购买区-->
-			
+			<!--右边购买区-->
+
 			<div class="shop">
+				<!--提示-->
 				<h3>小米MAX2</h3>
+				<!--第一级别-->
 				<p class="state">
-					<span class="hong">【64G版本 赠99元圈铁耳机，赠米粉卡，最高含100元话费】</span>
-					6.44“大屏/5300mAh 充电宝级的大电量/大像素相机/轻薄全金属/4GB大内存/骁龙八核处理器					
+					<span class="hong">【64G版本 赠99元圈铁耳机，赠米粉卡，最高含100元话费】</span> 6.44“大屏/5300mAh 充电宝级的大电量/大像素相机/轻薄全金属/4GB大内存/骁龙八核处理器
 				</p>
 				<span class="mony">1699元</span>
 				<h4>选择版本</h4>
 				<ul class="show-tow">
-					<li>
+					<li class="li-active">
 						<a href="">全网通版 4GB+128GB</a>
 						<span>1999元</span>
 					</li>
+					<li>
+						<a href="">全网通版 4GB+64GB</a>
+						<span>1699元</span>
+					</li>
+
+				</ul>
+				<h4>选择颜色</h4>
+				<p class="yanshe">
+					<a href="javacript:;">
+						<span class="kong"></span>
+						<span class="jing">金色</span>
+					</a>
+				</p>
+				<h5>选择小米提供的意外险
+					<a href="">了解意外险></a>
+				</h5>
+				<div class="bao">
+					<a href="">
+						<em>√</em>
+						<img src="images/bao.jpg" alt="" />
+						<p class="xiaomi">
+							<span>小米MAX2 意外保险</span>
+							<u>手机意外损坏，一年内免费维修</u>
+						</p>
+						<span class="mony1">149元</span>
+					</a>
+
+				</div>
+				<h4>搭配购买</h4>
+				<div class="dap">
+					<p class="shop-dap">搭配一起购买，<span>最多省吃4.1元</span>
+						<a href="">∨</a>
+					</p>
+				</div>
+
+				<div class="thies">
+					<p class="tex">
+						小米MAX2 全网通 4GB+64GB金色
+						<span>1699元</span>
+					</p>
+					<p class="zhongji">总计 ：1699元</p>
+				</div>
+			<!--加入购物车事件-->
+				<div class="join-shop">
+					<a class="join" href="javacript:;">加入购物车</a>
+				</div>
+				<div class="icon">
+					<img src="images/join.jpg" alt="" />
+					<span>支持7天无理由退货</span>
+				</div>
+				<div class="site">
+					<img src="images/tu.jpg" alt="" />
+					<div class="site-city">
+						<p class="city">
+							<span>北京</span>
+							<span>北京市</span>
+							<span>东城区</span>
+							<span>永定门外街道</span>
+						</p>
+						<span id="city-click">修改</span>
+				
+						
+					</div>
+					<div id="city-status">
+						<span class="ini">正在加载</span>
+						<span class="sale">有货</span>
+						<span class="over">该地区暂时无货</span>
+						<span class="no">该地区暂不支持配送</span>
+						<span class="pre">预售商品</span>
+						<span class="book">预售</span>
+						<span class="time"></span>
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+		<div class="wrap">
+			<img src="images/wrap.jpg" alt="" />
+		</div>
+		<!--收货地址选择-->
+		<div id="hide">	
+		<div class="modal-hide">
+			<span class="delete">×</span>
+			<div class="section">
+				<i class="iconfont icon-sousuo"></i>
+				<input type="text" placeholder="输入街道、乡镇、小区、或商圈名称" autocomplete="off" />
+			</div>
+			<div class="switch-type">
+				<a href="javacript:;" class="J-switchType">
+					手动选择地址>
+				</a>
+			</div>
+			<!--我的收货地址-->
+			<div class="my-address">
+				<p class="title">我的收货地址</p>
+				<p class="no-login">
+					现在<a href="logon.html">登录</a>
+					，可根据收货地址快速定位
+				</p>
+			</div>
+		</div>
+       </div>
+
+
+
+		<!--底部区-->
+		<div id="footer-t" class="margin">
+			<div class="margin">
+				<a href=""><i class="iconfont icon-libao"></i>预约维修服务</a>
+				<span>|</span>
+				<a href=""><i class="iconfont icon-libao"></i>预约维修服务</a>
+				<span>|</span>
+				<a href=""><i class="iconfont icon-libao"></i>预约维修服务</a>
+				<span>|</span>
+				<a href=""><i class="iconfont icon-libao"></i>预约维修服务</a>
+				<span>|</span>
+				<a href=""><i class="iconfont icon-libao"></i>预约维修服务</a>
+			</div>
+		</div>
+
+		<div id="footer-c">
+			<div class="margin">
+				<ul class="ul-a">
+
+					<li class="li-a a-active">
+						<a class="foot-a foot-active " href="">帮助中心</a>
+					</li>
+					<li class="li-a">
+						<a class="foot-a" href="">帮助中心</a>
+					</li>
+					<li class="li-a">
+						<a class="foot-a" href="">帮助中心</a>
+					</li>
+					<li class="li-a">
+						<a class="foot-a" href="">帮助中心</a>
+					</li>
+
+				</ul>
+				<ul class="ul-a">
+
+					<li class="li-a a-active">
+						<a class="foot-a  foot-active " href="">帮助中心</a>
+					</li>
+					<li class="li-a">
+						<a class="foot-a" href="">帮助中心</a>
+					</li>
+					<li class="li-a">
+						<a class="foot-a" href="">帮助中心</a>
+					</li>
+					<li class="li-a">
+						<a class="foot-a" href="">帮助中心</a>
+					</li>
+
+				</ul>
+				<ul class="ul-a">
+
+					<li class="li-a a-active">
+						帮助中心
+					</li>
+					<li class="li-a">
+						<a class="foot-a" href="">帮助中心</a>
+					</li>
+					<li class="li-a">
+						<a class="foot-a" href="">帮助中心</a>
+					</li>
+					<li class="li-a">
+						<a class="foot-a" href="">帮助中心</a>
+					</li>
+
+				</ul>
+				<ul class="ul-a">
+
+					<li class="li-a a-active">
+						帮助中心
+					</li>
+					<li class="li-a">
+						<a class="foot-a" href="">帮助中心</a>
+					</li>
+					<li class="li-a">
+						<a class="foot-a" href="">帮助中心</a>
+					</li>
+					<li class="li-a">
+						<a class="foot-a" href="">帮助中心</a>
+					</li>
+
+				</ul>
+				<ul class="ul-a">
+
+					<li class="li-a a-active">
+						帮助中心
+					</li>
+					<li class="li-a">
+						<a class="foot-a" href="">帮助中心</a>
+					</li>
+					<li class="li-a">
+						<a class="foot-a" href="">帮助中心</a>
+					</li>
+					<li class="li-a">
+						<a class="foot-a" href="">帮助中心</a>
+					</li>
+
+				</ul>
+				<ul class="ul-a">
+
+					<li class="li-a a-active">
+						帮助中心
+					</li>
+					<li class="li-a">
+						<a class="foot-a" href="">帮助中心</a>
+					</li>
+					<li class="li-a">
+						<a class="foot-a" href="">帮助中心</a>
+					</li>
+					<li class="li-a">
+						<a class="foot-a" href="">帮助中心</a>
+					</li>
+
+				</ul>
+				<ul class="ul-r">
+					<p class="phone">400-100-5678</p>
+					<p class="pr">
+						周一至周8:00-18:00
+						<br /> （仅收市话费）
+					</p>
+					<a href="" class="bor">24小时在线联系</a>
 				</ul>
 			</div>
-			
-			
 		</div>
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-			<!--底部区-->
-				<div id="footer-t" class="margin">
-					<div class="margin">
-					<a href=""><i class="iconfont icon-libao" ></i>预约维修服务</a>
-					<span>|</span>
-					<a href=""><i class="iconfont icon-libao" ></i>预约维修服务</a>
-					<span>|</span>
-					<a href=""><i class="iconfont icon-libao" ></i>预约维修服务</a>
-					<span>|</span>
-					<a href=""><i class="iconfont icon-libao" ></i>预约维修服务</a>
-					<span>|</span>
-					<a href=""><i class="iconfont icon-libao" ></i>预约维修服务</a>
-				  </div>
+
+		<div id="di">
+			<div class="margin">
+				<div class="di-logo">
+					<img src="images/logo.jpg" alt="" />
 				</div>
-				
-				<div id="footer-c">
-	<div class="margin">
-		<ul class="ul-a">
+				<div class="inof-txtx">
+					<p>
+						<a href="" class="p-a">小米商城</a>
+						<span class="p-span">|</span>
+						<a href="" class="p-a">小米商城</a>
+						<span class="p-span">|</span>
+						<a href="" class="p-a">小米商城</a>
+						<span class="p-span">|</span>
+						<a href="" class="p-a">小米商城</a>
+						<span class="p-span">|</span>
+						<a href="" class="p-a">小米商城</a>
+						<span class="p-span">|</span>
+						<a href="" class="p-a">小米商城</a>
+						<span class="p-span">|</span>
+						<a href="" class="p-a">小米商城</a>
+						<span class="p-span">|</span>
+						<a href="" class="p-a">小米商城</a>
+						<span class="p-span">|</span>
+						<a href="" class="p-a">小米商城</a>
+						<span class="p-span">|</span>
+						<a href="" class="p-a">小米商城</a>
+						<span class="p-span">|</span>
+						<a href="" class="p-a">小米商城</a>
+						<span class="p-span">|</span>
+						<a href="" class="p-a">小米商城</a>
 
-			<li class="li-a a-active">
-				<a class="foot-a foot-active " href="">帮助中心</a>
-			</li>
-			<li class="li-a">
-				<a class="foot-a" href="">帮助中心</a>
-			</li>
-			<li class="li-a">
-				<a class="foot-a" href="">帮助中心</a>
-			</li>
-			<li class="li-a">
-				<a class="foot-a" href="">帮助中心</a>
-			</li>
+					</p>
+					<p>
+						<a class="bb" href="">mi.com</a>
+						<a class="bb" href="">京ICP证111115号</a>
+						<a class="bb" href="">京ICP证111115号</a>
+						<a class="bb" href="">京ICP证111115号</a>
+						<a class="bb" href="">京ICP证111115号</a>
 
-		</ul>
-		<ul class="ul-a">
+						<a class="bb" href="">京ICP证111115号</a>
 
-			<li class="li-a a-active">
-				<a class="foot-a  foot-active " href="">帮助中心</a>
-			</li>
-			<li class="li-a">
-				<a class="foot-a" href="">帮助中心</a>
-			</li>
-			<li class="li-a">
-				<a class="foot-a" href="">帮助中心</a>
-			</li>
-			<li class="li-a">
-				<a class="foot-a" href="">帮助中心</a>
-			</li>
+						<br /> 违法和不良行为等违法和不良行为等违法和不良行为等
+					</p>
 
-		</ul>
-		<ul class="ul-a">
-
-			<li class="li-a a-active">
-				帮助中心
-			</li>
-			<li class="li-a">
-				<a class="foot-a" href="">帮助中心</a>
-			</li>
-			<li class="li-a">
-				<a class="foot-a" href="">帮助中心</a>
-			</li>
-			<li class="li-a">
-				<a class="foot-a" href="">帮助中心</a>
-			</li>
-
-		</ul>
-		<ul class="ul-a">
-
-			<li class="li-a a-active">
-				帮助中心
-			</li>
-			<li class="li-a">
-				<a class="foot-a" href="">帮助中心</a>
-			</li>
-			<li class="li-a">
-				<a class="foot-a" href="">帮助中心</a>
-			</li>
-			<li class="li-a">
-				<a class="foot-a" href="">帮助中心</a>
-			</li>
-
-		</ul>
-		<ul class="ul-a">
-
-			<li class="li-a a-active">
-				帮助中心
-			</li>
-			<li class="li-a">
-				<a class="foot-a" href="">帮助中心</a>
-			</li>
-			<li class="li-a">
-				<a class="foot-a" href="">帮助中心</a>
-			</li>
-			<li class="li-a">
-				<a class="foot-a" href="">帮助中心</a>
-			</li>
-
-		</ul>
-		<ul class="ul-a">
-
-			<li class="li-a a-active">
-			帮助中心
-			</li>
-			<li class="li-a">
-				<a class="foot-a" href="">帮助中心</a>
-			</li>
-			<li class="li-a">
-				<a class="foot-a" href="">帮助中心</a>
-			</li>
-			<li class="li-a">
-				<a class="foot-a" href="">帮助中心</a>
-			</li>
-
-		</ul>
-		<ul class="ul-r">
-			<p class="phone">400-100-5678</p>
-			<p class="pr">
-				周一至周8:00-18:00
-				<br />
-				（仅收市话费）
-			</p>
-			<a href="" class="bor">24小时在线联系</a>
-		</ul>
-					</div>
 				</div>
-				
-				
-			<div id="di">
-				<div class="margin">
-					<div class="di-logo">
-						<img src="images/logo.jpg" alt="" />
-					</div>
-					<div class="inof-txtx">
-						<p>
-							<a href="" class="p-a">小米商城</a>
-							<span class="p-span">|</span>
-							<a href="" class="p-a">小米商城</a>
-							<span class="p-span">|</span>
-							<a href="" class="p-a">小米商城</a>
-							<span class="p-span">|</span>
-							<a href="" class="p-a">小米商城</a>
-							<span class="p-span">|</span>
-							<a href="" class="p-a">小米商城</a>
-							<span class="p-span">|</span>
-							<a href="" class="p-a">小米商城</a>
-							<span class="p-span">|</span>
-							<a href="" class="p-a">小米商城</a>
-							<span class="p-span">|</span>
-							<a href="" class="p-a">小米商城</a>
-							<span class="p-span">|</span>
-							<a href="" class="p-a">小米商城</a>
-							<span class="p-span">|</span>
-							<a href="" class="p-a">小米商城</a>
-							<span class="p-span">|</span>
-							<a href="" class="p-a">小米商城</a>
-							<span class="p-span">|</span>
-							<a href="" class="p-a">小米商城</a>
-							
-							
-							
-						</p>
-						<p>
-							<a class="bb" href="">mi.com</a>
-							<a class="bb" href="">京ICP证111115号</a>
-							<a class="bb" href="">京ICP证111115号</a>
-							<a class="bb" href="">京ICP证111115号</a>
-							<a class="bb" href="">京ICP证111115号</a>
-							
-							<a class="bb" href="">京ICP证111115号</a>
-							
-							<br />
-							违法和不良行为等违法和不良行为等违法和不良行为等
-						</p>
-						
-					</div>
-					<div class="info-right">
-						<a href="" class="info-img">
-							<img src="images/ch.png" alt="" />
-						</a>
-						<a href="" class="info-img">
-							<img src="images/sf.png" alt="" />
-						</a>
-						<a href="" class="info-img">
-							<img src="images/kx.png" alt="" />
-						</a>
-						<a href="" class="info-img">
-							<img src="images/ws.png" alt="" />
-						</a>
-					</div>
-					<div class="didi">
-						
-						<img src="images/didi.png" alt="" />
-					</div>
+				<div class="info-right">
+					<a href="" class="info-img">
+						<img src="images/ch.png" alt="" />
+					</a>
+					<a href="" class="info-img">
+						<img src="images/sf.png" alt="" />
+					</a>
+					<a href="" class="info-img">
+						<img src="images/kx.png" alt="" />
+					</a>
+					<a href="" class="info-img">
+						<img src="images/ws.png" alt="" />
+					</a>
+				</div>
+				<div class="didi">
+
+					<img src="images/didi.png" alt="" />
 				</div>
 			</div>
-		<script type="text/javascript">
-			$(".nav-tem").hover(
-        function(){
-           $(this).find("div").show();
-        },function(){
-           $(this).find("div").hide();
-        }
-    );
-    
-		</script>
+		</div>
+		<!--<script type="text/javascript">
+			
+		</script>-->
 		<script src="js/common.js" type="text/javascript" charset="utf-8"></script>
 		<script src="js/details.js" type="text/javascript" charset="utf-8"></script>
 		<script src="js/buy.js" type="text/javascript" charset="utf-8"></script>
 	</body>
+
 </html>
