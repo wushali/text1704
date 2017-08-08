@@ -42,6 +42,24 @@
 	margin-left: 15px;
 	font: 12px/40px "";
 	text-align: center;
+	position: relative;
+}
+#top .top-cart .empty_cart{
+	display: none;
+    position: absolute;
+    top: 41px;
+    right: 0px;
+    width: 380px;
+    padding: 18px 0;
+    text-align: center;
+    color: #000;
+    height: 62px;
+    line-height: 62px;
+    background: #fff;
+    border-radius: 0 0 5px 5px;
+    border: 1px solid #ddd;
+    border-top: none;
+    z-index: 500;
 }
 
 i {
@@ -73,6 +91,10 @@ header .header-tem {
 	float: left;
 	width: 127px;
 	paddint-right: 15px;
+	
+}
+header .header-tem img{
+	padding: 30px 0 0 30px;
 }
 
 header li.nav-tem {
@@ -97,7 +119,13 @@ header form {
 	height: 50px;
 	margin-top: 24px;
 	position: relative;
+	z-index: 30;
 }
+header form #list{
+	background: #fff;
+	
+}
+
 
 header form #txt {
 	float: left;
@@ -117,7 +145,7 @@ header form #btn {
 	height: 48px;
 	border: 1px solid #e0e0e0;
 	color: #616161;
-	font-size: 24px!important;
+	font-size: 24px;
 	line-height: 48px;
 	text-align: center;
 }

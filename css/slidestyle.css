@@ -1,5 +1,5 @@
 @charset "utf-8";
-* {
+/** {
 	margin: 0;
 	padding: 0;
 	list-style-type: none;
@@ -18,15 +18,15 @@ a:hover {
 
 body {
 	font: 12px/180% Arial, Helvetica, sans-serif, "新宋体";
-}
+}*/
 
 
 /* Div1 */
 
 .Div1 {
 	width: 1236px;
-	height: auto;
-	margin: 30px auto;
+	height:340px;
+	margin:0px auto;
 	overflow: hidden;
 	position: relative;
 }
@@ -35,7 +35,7 @@ body {
 	height: 32px;
 	width: 1236px;
 	padding-bottom: 3px;
-	background: url(../images/lizi_img001.jpg) repeat-x;
+	/*background: url(../images/lizi_img001.jpg) repeat-x;*/
 }
 
 .Div1_title em {
@@ -70,7 +70,7 @@ body {
 }
 
 .Div1_prev {
-	padding: 2px 10px 0 0;
+	padding: 2px 0px 0 0;
 }
 
 .Div1_next {
@@ -84,10 +84,10 @@ body {
 	margin-right: 10px;
 }
 
-.Div1_title span a:hover {
+/*.Div1_title span a:hover {
 	color: #f34d01;
 	/*background: url(../images/lizi_img004.jpg) no-repeat left center;*/
-}
+}*/
 
 .Div1_title span a.Div1_title_a1 {
 	color: #f34d01;
@@ -97,17 +97,20 @@ body {
 .Div1_main {
 	padding-top: 13px;
 	height: 340px;
-	width: 10000px;
+	width: 3000px;
 	overflow: hidden;
 	position: relative;
 	z-index: 1;
 }
 
 .Div1_main div {
-	width: 1236px;
+	width: 1226px;
 	height: 340px;
 	float: left;
+	margin-right: 10px;
 }
+.Div1_main .div-l{
+	padding-left: 20px;}
 
 .Div1_main div span {
 	/*background: url(../images/lizi_img006.jpg) no-repeat;*/
@@ -116,8 +119,9 @@ body {
 	height: 340px;
 	display: block;
 	float: left;
-	background: #ff0;
+	background: #fff;
 	margin-right: 10px;
+	border-top:1px solid #ff7878;
 }
 
 .Div1_main div span a {
@@ -134,7 +138,7 @@ body {
 	padding: 40px 0 40px 0;
 }
 
-/*.Div1_main_a1,*/
+.Div1_main_a1,
 .Div1_main_a1 img {
 	width: 160px;
 	height: 160px;
@@ -152,49 +156,42 @@ body {
 	;
 }
 
-.Div1_main div span b {
+.Div1_main div span .Div1_main_a2 b {
 	display: block;
 	padding-left: 10px;
+	height: 24px;
 	color: #787878;
 }
 
-.Div1_main div span p {
+.Div1_main div span .Div1_main_a2 p {
 	line-height: 20px;
 	padding: 0 10px;
-	height: 87px;
-	color: #787878;
+	height: 20px;
+	color: #ff7878;
 }
 
 .Div1_main_a2 {
 	
-	width: 77px;
-	height: 19px;
-	color: #fff;
+	width: 177px;
+	height: 30px;
+	padding-top: 10px;
 	text-align: center;
 	line-height: 19px;
 	margin:0 auto;
 }
 
-/*.Div1_main_a2:hover {
-	background: url(../images/lizi_img008.jpg) no-repeat;
-}*/
 
-/*.Div1_main div span.Div1_main_span1 .Div1_main_a1 {
-	background: url(../images/lizi_img010.jpg) no-repeat;
-}*/
+
+
 
 .Div1_main div span.Div1_main_span1 b,
 .Div1_main div span.Div1_main_span1 p {
 	color: #33a0ff;
 }
 
-/*.Div1_main div span.Div1_main_span1 .Div1_main_a2 {
-	background: url(../images/lizi_img008.jpg) no-repeat;
-}*/
 
-/*.Div1_main div span.Div1_main_span1 .Div1_main_a2:hover {
-	background: url(../images/lizi_img009.jpg) no-repeat;
-}*/
+
+
 
 .Div1 .Div1_prev1,
 .Div1 .Div1_next1 {
@@ -203,26 +200,29 @@ body {
 	height: 30px;
 	position: absolute;
 	cursor: pointer;
-	z-index: 2;
-	top: 102px;
+	z-index: 100;
+	
 }
 
-.Div1 .Div1_prev1 img,
+/*.Div1 .Div1_prev1 img,
 .Div1 .Div1_next1 img {
 	width: 31px;
 	height: 30px;
-}
+}*/
 
-.Div1 .Div1_prev1:hover,
+/*.Div1 .Div1_prev1:hover,
 .Div1 .Div1_next1:hover {
 	opacity: 0.7;
 	.filter: alpha(opacity=70)
-}
+}*/
+
 
 .Div1 .Div1_prev1 {
-	left: 18px;
+	right:38px;
+	top: -2px;
 }
 
 .Div1 .Div1_next1 {
-	left: 954px;
+	right:5px;
+	top: -4px;
 }

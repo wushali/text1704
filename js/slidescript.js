@@ -7,7 +7,7 @@ $(function() {
 	})
 
 	var index = 0;
-	Swidth = 1000;
+	Swidth = 1236;
 	timer = null;
 	len = $(".Div1_title span a").length;
 
@@ -33,21 +33,21 @@ $(function() {
 			NextPage();
 		});
 	});
-	//下一页
+	/*下一页*/
 	$(".Div1_next img").click(function() {
 		index++;
 		NextPage();
 	});
-	//上一页
+	/*上一页*/
 	$(".Div1_prev img").click(function() {
 		index--;
 		PrevPage();
 	});
-	//自动滚动
+	/*自动滚动*/
 	var timer = setInterval(function() {
 		index++;
 		NextPage();
-	}, 2000);
+	}, 4000);
 
 	$(".Div1_next img , .Div1_main , .Div1_prev img , .Div1_title span").mouseover(function() {
 		clearInterval(timer);
@@ -56,7 +56,7 @@ $(function() {
 		timer = setInterval(function() {
 			index++;
 			NextPage();
-		}, 2000);
+		}, 4000);
 	});
 
-}) //建站套餐
+}) 

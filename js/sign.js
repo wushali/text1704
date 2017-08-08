@@ -83,9 +83,18 @@ window.onload=function(){
 
 /*点击出现下拉列表*/
 					 $(".tits").click(function(){
-					         $(this).siblings().find(".chil").show();
-					      },function(){
-					         $(this).siblings().find(".chil").hide();
-					      }
-					  );
+					 	console.log("-----------")
+					         $(this).siblings().find(".chil").slideToggle();
+					   
+//					
+					  });
+
+/*$(".tits").click(function() {
+	console.log("-----------")
+    	$(".chil").css("display","block").animate({"right":"31px"},200)
+		},function () {
+    	$(".chil").css("display","none").animate({"right":"55px"},200)
+	});*/
+					  
+
 			

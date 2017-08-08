@@ -18,7 +18,7 @@ $(function(){
 		$("#partNav ul").html(html);
 	})
 });
-//
+
 $(".header-tem").hover(
         function(){
            $(this).find("#partNav ").show();
@@ -39,4 +39,16 @@ $(document).ready(function () {
         }
     });
 });
+
+
+/*top切换区*/
+$(".nav-tem").hover(
+				function() {
+					$(this).find("div").stop().slideDown();
+
+				},
+				function() {
+					$(this).find("div").stop().slideUp("slow");
+				}
+			);
 

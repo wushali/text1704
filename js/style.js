@@ -32,156 +32,14 @@ function data1(data) {
 /*logo栏teb切换*/
 $(".nav-tem").hover(
 	function() {
-		$(this).find("div").show();
+		$(this).find("div").stop().slideDown();
 	},
 	function() {
-		$(this).find("div").hide();
+		$(this).find("div").stop().slideUp("slow");
 	}
 );
 
 /*无縫轮播图*/
-
-//$(function() {
-//	var i = 0;
-//	//var _this = this;
-//	var $liSit = $(".box-xd");
-//	var $liS = $liSit.find(".box-ul");
-//	//$liS.eq(0).clone(true).appendTo($liSit);
-//	//$.extend($liS,$liS.eq(0))
-//	//$liS.length += $liS.length;
-//	//var newlis = $.extend(true, {}, $liS.eq(0));
-//	//newlis.clone(true).appendTo($liSit);
-//	//$liS = $liSit.find(".box-ul");
-//	//console.log($liS)
-//	var len = $liS.length;
-//	
-//	console.log("img----------"+len);
-//	var perWidth = $liS.eq(0).outerWidth();
-//	/*$liSit.css("width",len*perWidth);*/
-//	function move() {
-//		$liSit.find(".box-ul").removeClass('box-active')
-//		i++;
-//		if(i == len) {
-//			i = 1;
-//			$liSit.css("left", 0);
-//		}
-//		//if(i == len - 1) {
-////			$("#sliderNav li").eq(0).addClass("hover").siblings().removeClass("hover");
-////		} else {
-////			$("#sliderNav li").eq(i).addClass("hover").siblings().removeClass("hover");
-////		}
-//		/*console.log(i)*/
-//		$liSit.stop().animate({ "left": -1 * perWidth }, 500);
-//
-//	}
-//	var timer = setInterval(function() {
-//		move();
-//	}, 500)
-//
-////	$("#sliderNav li").hover(function() {
-////		clearInterval(timer);
-////		i = $(this).index() - 1;
-////		console.log(this)
-////		move();
-////	}, function() {
-////		timer = setInterval(move, 3000);
-////
-////	})
-//
-//	$(".bto").click(function() {
-//		i = i;
-//		clearInterval(timer);
-//		move();
-//		timer = setInterval(move, 3000);
-//	})
-//	$(".btn").click(function() {
-//		clearInterval(timer);
-//		if(i == 0) {
-//			i = len - 2;
-//			$liSit.stop().css("left", -(len - 1) * perWidth);
-//		} else {
-//			i = i - 1;
-//		}
-//		move();
-//		timer = setInterval(move, 3000);
-//	})
-//});
-
-
-
-/*无縫轮播图*/
-//$(function() {
-//
-//	$(".box-xd .box-ul .box-li").mouseover(function() {
-//		$(this).addClass(".box-active").siblings(".box-i").removeClass(".box-active");
-//	}).mouseout(function() {
-//		$(this).removeClass(".box-active").siblings(".box-i");
-//	})
-//
-//	var index = 0;
-//	Swidth =1266;
-//	timer = null;
-//	//len = $(".Div1_title span a").length;
-//
-//	function NextPage() {
-//		if(index > 2) {
-//			index = 0;
-//		}
-//		//$(".Div1_title span a").removeClass("Div1_title_a1").eq(index).addClass("Div1_title_a1");
-//		$(".box-xd").stop(true, false).animate({ left: -index * Swidth + "px" }, 600)
-//	}
-//
-//	function PrevPage() {
-//		if(index < 0) {
-//			index = 2;
-//		}
-//		//$(".Div1_title span a").removeClass("Div1_title_a1").eq(index).addClass("Div1_title_a1");
-//		$(".box-xd").stop(true, false).animate({ left: -index * Swidth + "px" }, 600)
-//	}
-//
-////	$(".Div1_title span a").each(function(a) {
-////		$(this).mouseover(function() {
-////			index = a;
-////			NextPage();
-////		});
-////	});
-//	//下一页
-//	$(".sliderBtns .btn").click(function() {
-//		index++;
-//		NextPage();
-//	});
-//	//上一页
-//	$(".sliderBtns .bto").click(function() {
-//		index--;
-//		PrevPage();
-//	});
-//	//自动滚动
-//	var timer = setInterval(function() {
-//		index++;
-//		NextPage();
-//	}, 4000);
-//
-//	$(".btn , .box-xd").mouseover(function() {
-//		clearInterval(timer);
-//	});
-//	$(".bto .box-xd").mouseleave(function() {
-//		timer = setInterval(function() {
-//			index++;
-//			NextPage();
-//		}, 4000);
-//	});
-//
-//}) //建站套餐
-
-
-
-
-
-
-
-
-
-
 
 
 /*侧边导航*/
@@ -526,37 +384,75 @@ function animate4(index) {
 
 
 
-/*电视影音引用json区域  bug*/
+/*电视影音引用json区域  */
 $(window).load(function(){
 	$.ajax({
 		type:"GET",
 		url:"index.json",
 		async:true,
 		success:function(data){
-			
+			console.log(data);
 			var html="";
 			for(var i in data){
 				
 			
-			html += "<li class='brick-item'><a href='detail.html?id='"+data[i].id+"'><img src=' "+data[i].src +" '><b class='box-i'>"+date[i].title+"</b></a><b class='box-span'>"+date[i].details+"</b><p class='box-p'>"+data[i].price+"</p><p class='pos'>"+data[i].name +"</p></li>"
+			html += "<li class='brick-item'><a href='detail.html?id='"+data[i].id+"'><img src=' "+data[i].src +" '><b class='box-i'>"+data[i].title+"</b></a><b class='box-span'>"+data[i].details+"</b><p class='box-p'>"+data[i].price+"</p><p class='pos'>"+data[i].name +"</p></li>"
 		}
+			
+			$(" .tab-content  ").html(html);
+			$(" .tab-cont2  ").html(html);
+			$(" .tab-cont4  ").html(html);
+			$(" .tab-cont-4  ").html(html);
+		},
+		error:function(res){
+			console.log(res);
+		}
+	})
+});
+/*电视影音引用json区域  */
+$(window).load(function(){
+	$.ajax({
+		type:"GET",
+		url:"dome.json",
+		async:true,
+		success:function(data){
+			console.log(data);
+			var html="";
+			for(var i in data){
+				
+			
+			html += "<li class='brick-item'><a href='detail.html?id='"+data[i].id+"'><img src=' "+data[i].src +" '><b class='box-i'>"+data[i].title+"</b></a><b class='box-span'>"+data[i].details+"</b><p class='box-p'>"+data[i].price+"</p><p class='pos'>"+data[i].name +"</p></li>"
+		}
+			$(" .tab-cont-2  ").html(html);
 			$(" .tab-content2  ").html(html);
-			}
+			
+		},
+		error:function(res){
+			console.log(res);
+		}
 	})
-	})
+});
 	
+	
+ /*购物车滑过效果*/
+    var timer = "";
+    $(".top-cart").mouseover(function(){
+        $(".empty_cart").show();
+    });
+    $(".toop-cart").mouseout(function(){
+            timer = setTimeout(function(){
+            $(".empty_cart").hide();
+        },1000); 
+    });
+    $(".empty_cart").mouseover(function(){
+        clearTimeout(timer);
+        $(".empty_cart").show();
+    });
+    $(".empty_cart").mouseout(function(){
+        $(".empty_cart").hide();
+    });	
 
-/*var oNewsList = document.getElementById("news");
-				var oUl = oNewsList.getElementsByTagName("ul")[0];
-				var oBtn = document.getElementById("btn");
-				Ajax("news.json",foo);
-				function foo(data){
-					data = JSON.parse(data);
-					var html = "";
-					for(var i in data){
-						html += "<li class='brick-item'><a href='#'><img src=' "+data[i].src +" '><b class='box-i'>"+date[i].title+"</b></a><b class='box-span'>"+date[i].details+"</b><p class='box-p'>"+data[i].price+"</p><p class='pos'>"+data[i].name +"</p></li>"
-					}
-					oUl.innerHTML = html;*/
+
 
 
 

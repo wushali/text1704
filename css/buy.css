@@ -30,15 +30,18 @@
 }
 
 #show #show-img .show-p {
-	width: 1126px;
+	width: 560px;
 	height: 560px;
-	background: #ff0;
+	
 }
 
 #show #show-img img {
 	width: 560px;
 	height: 560px;
+	position: relative;
 }
+.footer{width:1024px;margin:0 auto;height:400px;background:#000;}
+.fixed{ position:fixed;right:0;bottom:0;}
 
 #show .dj a {
 	display: block;
@@ -106,7 +109,8 @@
 }
 #show .show-tow{
 	width: 606px;
-	height: 101px;
+	height: 232px;
+	
 }
 #show .show-tow li{
 	width:298px;
@@ -114,6 +118,7 @@
 	border: 1px solid #ccc;
 	float:left;
 	margin-right: 3px;
+	margin-top: 20px;
 	
 }
 #show .show-tow li.li-active{
@@ -262,6 +267,7 @@
 	font:16px/54px "";
 	color: #fff;
 	text-align: center;
+	
 }
 #show .icon{
 	width: 606px;

@@ -10,9 +10,15 @@
 		<link rel="stylesheet" href="css/details.css" type="text/css" />
 		<link rel="stylesheet" href="css/buy.css" type="text/css" />
 		<link rel="stylesheet" href="iconfont/iconfont.css" />
+		
 		<script type="text/javascript" src="js/jquery-1.11.3.js" charset="utf-8"></script>
 		<script src="js/template.js" type="text/javascript" charset="utf-8"></script>
-		<script src="js/common.js" type="text/javascript" charset="utf-8"></script>
+		
+		<script src="js/jquery.cookie.js" type="text/javascript"></script>
+		<script src="js/common.js" type="text/javascript"></script>
+		
+	
+<script type="text/javascript" src="js/jquery-addShopping.js"></script>
 	</head>
 
 	<body>
@@ -43,7 +49,7 @@
 				</div>
 				<div class="top-cart">
 					<i class="iconfont icon-shopping"></i>
-					<a href="cart.html">购物车<span id="num">(0)</span></a>
+					<a href="cart.html">购物车(<span id="num">0</span>)</a>
 				</div>
 				<div class="top-in">
 					<a href="logon.html">登录</a>
@@ -424,14 +430,16 @@
 			<div class="margin">
 		<!--js制作数据区-->
 				<div id="show-img">
-					<p class="show-p" style="left:-560px">
-						<!--<img src="images/show-1.jpg" alt="" />
-						<img src="images/show-2.jpg" alt="" />-->
+					<p class="show-p" id="shol">
+						<img src="images/show-1.jpg" alt="" />
+						<img src="images/show-2.jpg" alt="" />
+						<img src="images/buy-bg3.jpg" alt="" />
+						<img src="images/buy-bg4.jpg" alt="" />
 					</p>
-					<div class="dj">
+					<!--<div class="dj">
 						<a href="javacript:;" class="prev" id="prev1">&lt;</a>
 						<a href="javacript:;" class="next" id="next1">&gt;</a>
-					</div>
+					</div>-->
 				</div>
 
 			</div>
@@ -448,11 +456,19 @@
 				<h4>选择版本</h4>
 				<ul class="show-tow">
 					<li class="li-active">
-						<a href="">全网通版 4GB+128GB</a>
+						<a href="javacript:;">全网通版 4GB+128GB</a>
 						<span>1999元</span>
 					</li>
 					<li>
-						<a href="">全网通版 4GB+64GB</a>
+						<a href="javacript:;">全网通版 4GB+34GB</a>
+						<span>1699元</span>
+					</li>
+					<li>
+						<a href="javacript:;">全网通版 4GB+64GB</a>
+						<span>1699元</span>
+					</li>
+					<li>
+						<a href="javacript:;">全网通版 4GB+64GB</a>
 						<span>1699元</span>
 					</li>
 
@@ -495,6 +511,7 @@
 				</div>
 			<!--加入购物车事件-->
 				<div class="join-shop">
+					
 					<a class="join" href="javacript:;">加入购物车</a>
 				</div>
 				<div class="icon">
@@ -752,7 +769,7 @@
 		<!--<script type="text/javascript">
 			
 		</script>-->
-		<script src="js/common.js" type="text/javascript" charset="utf-8"></script>
+		<!--<script src="js/common.js" type="text/javascript" charset="utf-8"></script>-->
 		<script src="js/details.js" type="text/javascript" charset="utf-8"></script>
 		<script src="js/buy.js" type="text/javascript" charset="utf-8"></script>
 	</body>
